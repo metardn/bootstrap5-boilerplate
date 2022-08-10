@@ -6,78 +6,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./assets/style/login.css">
         <link rel="stylesheet" href="./css/style.css" />
-        <link rel="icon" href="./img/icon.png" />
-        <title>Basic - Bootstrap 5 with Gulp 4</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+        <title>AMS</title>
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container-fluid"> <a class="navbar-brand" href="./">Basic 5</a>
-
-                <button class="navbar-toggler"
-                type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
-
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./">Home</a>
-
-                        </li>
-                        <li class="nav-item"> <a class="nav-link" href="./about.html">About</a>
-
-                        </li>
-                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </a>
-
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a>
-
-                                </li>
-                                <li><a class="dropdown-item" href="#">Another action</a>
-
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a>
-
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+        <div class="container-fluid">
+            <div class="row min-vh-100">
+                <div class="col-12 col-md-6 col-lg-5 background-texture-1 d-flex justify-content-between flex-column p-4 pb-0">
+                    <img src="./assets/img/AMS.svg" alt="" id="logo">
+                    <div class="d-flex justify-content-center">
+                        <div class="login my-5 py-4 col-12 col-sm-9 col-xl-8 col-xxl-7">
+                             <h2 class="primary-green fw-bold mb-3">Log in</h2>
+                             <h6 class="primary-font mb-4 fw-normal text-nowrap">Please enter <span class="primary-green">Username</span> and <span class="primary-green">Password.</span></h6>
+                            <form action="">
+                                <div class="mb-4">
+                                    <label for="username" class="form-label fw-bold primary-font">Username</label>
+                                    <input [(ngModel)]="user.username" type="username" required
+                                    class="form-control primary-font fw-normal" id="username" placeholder="Enter Username"
+                                    name="username">
+                                </div>
+                                <div class="mb-5">
+                                    <label for="password" class="form-label fw-bold primary-font">Password</label>
+                                    <input [(ngModel)]="user.password" type="password" required
+                                    class="form-control primary-font fw-normal" id="password" placeholder="Enter Password"
+                                    name="password">
+                                </div>
+                                <div class="d-grid mb-5">
+                                    <button type="submit" onclick="location.href='dashboard.html'" class="login-btn bg-primary-green border-0 text-white fw-bold">Log in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="footer primary-font">&copy;2020 All Rights Reserved. PT Indonesia Indicator</p>
                 </div>
-            </div>
-        </nav>
-        <div class="container mt-5 mb-5">
-             <h1 class="display-3">Boilerplate Bootstrap 5+  with Gulp 4 </h1>
-
-            <p class="lead">Basic5 is a Bootstrap 5+ boilerplate with Gulp4, cross-env, Sass, sourcemaps,
-                concat, CSS & HTML minification, uglify, image optimization, template partials,
-                BrowserSync.</p>
-            <p><a target="_blank" class="btn btn-primary" href="https://bootstrapstarter.com/template-basic5-bootstrap5-html/"
-                role="button">Documentation &raquo;</a>
-            </p>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579032365451-d20e00c0ed23?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579032365437-9f9d275b0db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579033060982-1bb5b083f4fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                <div class="col-12 col-md bg-primary-green background-texture-2 px-0 py-0 d-flex align-items-center">
+                    <div class="d-flex align-items-center justify-content-center py-5">
+                        <div class="col-7 col-md-8 col-xl-7 my-5">
+                             <h1 class="text-white fw-bold title mb-4 mt-5"><img src="./assets/img/illustration/quote.svg"><br>Manage<br>Your Assets<br>Easily <img src="./assets/img/illustration/quote.svg"></h1>
+                            <div class="row mb-5">
+                                <div class="col-2 col-xxl-1">
+                                    <img src="./assets/img/illustration/curve.svg">
+                                </div>
+                                <div class="col-7 d-flex align-items-end">
+                                     <h6 class="text-white sub-title fw-normal">Manage or monitor your many assets very easily, one look, you will be able to manage and monitor at the same time. Everything <span class="fw-bold">will be easy</span> with <span class="fw-bold">Asset Management System</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <footer class="footer container text-center">
-            <p>&copy; Bootstrap Basic5 Starter with Gulp</p>
-        </footer>
         <script src="./js/all.js"></script>
     </body>
 

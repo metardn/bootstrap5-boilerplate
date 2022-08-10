@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./assets/style/dashboard.css">
+        <link rel="stylesheet" href="./css/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+        <title>AMS</title>
+    </head>
+    
+    <body>
+        <div class="container-fluid background">
+            <div class="mx-3">
+                <div class="row">
+                    <div class="col-sm-2 col-md-5 col-lg-4 col-xl-3">
+                        <!-- sidebar -->
+                        <div class="d-none d-sm-block position-fixed sidebar add-shadow">
+                            <div class="m-3">
+                                <div class="d-flex justify-content-center my-4">
+                                    <img src="./assets/img/logo.svg" alt="">
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <ul class="list-unstyled p-0">
+                                        <li class="d-flex justify-content-center py-3">
+                                            <img src="./assets/img/icons/home.svg" alt="">
+                                        </li>
+                                        <li class="d-flex justify-content-center py-3">	<a href="server-news.html">
+
+							<img src="./assets/img/icons/server.svg" alt="">
+
+						</a>
+                                        </li>
+                                        <li class="d-flex justify-content-center py-3">
+                                            <img src="./assets/img/icons/code.svg" alt="">
+                                        </li>
+                                        <li class="d-flex justify-content-center py-3">
+                                            <img src="./assets/img/icons/book-open.svg" alt="">
+                                        </li>
+                                        <li class="d-flex justify-content-center py-3">
+                                            <img src="./assets/img/icons/key.svg" alt="">
+                                        </li>
+                                        <li class="d-flex justify-content-center py-3">
+                                            <img src="./assets/img/icons/edit.svg" alt="">
+                                        </li>
+                                        <li class="d-flex justify-content-center py-3">
+                                            <img src="./assets/img/icons/image.svg" alt="">
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-center d-flex align-items-stretch">
+                                        <ul class="list-unstyled p-0">
+                                            <li class="d-flex justify-content-center py-3">
+                                                <img src="./assets/img/icons/info.svg" alt="">
+                                            </li>
+                                            <li class="d-flex justify-content-center py-3">
+                                                <img src="./assets/img/icons/log-out.svg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-sidebar position-fixed bg-white d-none d-md-block">
+                            <div class="m-4">
+                                	<h4 class="py-2">Home</h4>
+                                <div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 sub-sidebar-menu-active">
+                                    <svg width="18" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.2555 5.6501H12.3622C12.097 4.67202 11.549 3.78439 10.7804 3.08806C10.0119 2.39174 9.05361 1.91464 8.01452 1.71098C6.97542 1.50733 5.89716 1.58527 4.90226 1.93597C3.90736 2.28667 3.03572 2.89605 2.38638 3.69488C1.73704 4.49371 1.33603 5.44994 1.22893 6.45494C1.12183 7.45993 1.31292 8.47338 1.7805 9.38012C2.24808 10.2869 2.97339 11.0506 3.87402 11.5844C4.77465 12.1182 5.81449 12.4009 6.87537 12.4001H13.2555C14.1955 12.4001 15.0971 12.0445 15.7618 11.4116C16.4265 10.7786 16.8 9.9202 16.8 9.0251C16.8 8.12999 16.4265 7.27155 15.7618 6.63861C15.0971 6.00568 14.1955 5.6501 13.2555 5.6501Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    <label>Dashboard</label>
+                                </div>
+                                <div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2">
+                                    <svg width="18" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5 8H13.5L11.25 14.75L6.75 1.25L4.5 8H1.5" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label>Activity Logs</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col my-4">
+                        <div class="content">
+                            <!-- Header -->
+                            <div class="container-fluid bg-white d-flex justify-content-between align-items-center py-2 corner-rounded add-shadow">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <svg class="primary-green" width="18" viewBox="0 0 18 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.2555 5.6501H12.3622C12.097 4.67202 11.549 3.78439 10.7804 3.08806C10.0119 2.39174 9.05361 1.91464 8.01452 1.71098C6.97542 1.50733 5.89716 1.58527 4.90226 1.93597C3.90736 2.28667 3.03572 2.89605 2.38638 3.69488C1.73704 4.49371 1.33603 5.44994 1.22893 6.45494C1.12183 7.45993 1.31292 8.47338 1.7805 9.38012C2.24808 10.2869 2.97339 11.0506 3.87402 11.5844C4.77465 12.1182 5.81449 12.4009 6.87537 12.4001H13.2555C14.1955 12.4001 15.0971 12.0445 15.7618 11.4116C16.4265 10.7786 16.8 9.9202 16.8 9.0251C16.8 8.12999 16.4265 7.27155 15.7618 6.63861C15.0971 6.00568 14.1955 5.6501 13.2555 5.6501Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                     <h5 class="primary-font header-title m-0 fw-bold">Dashboard</h5>
+                                </div>
+                                <div class="row p-0">
+                                    <div class="col user p-0 d-none d-sm-block">
+                                        <label class="fw-bold">Geneva</label>	<small>admin</small>
+                                    </div>
+                                    <div class="col p-0">
+                                        <img class="user-ava rounded-circle" src="./assets/img/avatar/ava.jpg"
+                                        alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <!-- Left Column -->
+                                <div class="col-12 col-sm">
+                                    <div class="card server-card border-0 p-3 px-4 corner-rounded">
+                                        <div class="mb-5 d-flex justify-content-between">
+                                             <h4 class="fw-bold">All Servers</h4>
+                                            <div class="secondary-font bg-white map-pin d-flex justify-content-center align-items-center">
+                                                <svg width="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 7.72727C15 12.1818 9 16 9 16C9 16 3 12.1818 3 7.72727C3 6.20831 3.63214 4.75155 4.75736 3.67748C5.88258 2.60341 7.4087 2 9 2C10.5913 2 12.1174 2.60341 13.2426 3.67748C14.3679 4.75155 15 6.20831 15 7.72727Z"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    />
+                                                    <path d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        	<h6 class="mb-1 mt-3 fw-light">Total Sever</h6>
+                                        	<h1 class="m-0 fw-bold">623</h1>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-12 col-xxl">
+                                            <div class="card p-3 px-4 corner-rounded add-shadow border-0 card-between">
+                                                	<h6 class="fw-light secondary-font">Total Rack</h6>
+                                                	<h1 class="fw-bold primary-font pb-3">34</h1>
+                                                <div class="d-flex green-1 justify-content-end mt-5">
+                                                    <svg width="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.875 13.125C17.9105 13.125 18.75 12.2855 18.75 11.25C18.75 10.2145 17.9105 9.375 16.875 9.375C15.8395 9.375 15 10.2145 15 11.25C15 12.2855 15.8395 13.125 16.875 13.125Z"
+                                                        fill="currentColor" />
+                                                        <path d="M48.75 18.75H11.25C10.2557 18.749 9.30249 18.3536 8.59945 17.6506C7.8964 16.9475 7.50099 15.9943 7.5 15V7.5C7.50099 6.50574 7.8964 5.55249 8.59945 4.84945C9.30249 4.1464 10.2557 3.75099 11.25 3.75H48.75C49.7443 3.75099 50.6975 4.1464 51.4006 4.84945C52.1036 5.55249 52.499 6.50574 52.5 7.5V15C52.499 15.9943 52.1036 16.9475 51.4006 17.6506C50.6975 18.3536 49.7443 18.749 48.75 18.75ZM11.25 7.5V15H48.75V7.5H11.25Z"
+                                                        fill="currentColor" />
+                                                        <path d="M16.875 31.875C17.9105 31.875 18.75 31.0355 18.75 30C18.75 28.9645 17.9105 28.125 16.875 28.125C15.8395 28.125 15 28.9645 15 30C15 31.0355 15.8395 31.875 16.875 31.875Z"
+                                                        fill="currentColor" />
+                                                        <path d="M48.75 37.5H11.25C10.2557 37.499 9.30249 37.1036 8.59945 36.4006C7.8964 35.6975 7.50099 34.7443 7.5 33.75V26.25C7.50099 25.2557 7.8964 24.3025 8.59945 23.5994C9.30249 22.8964 10.2557 22.501 11.25 22.5H48.75C49.7443 22.501 50.6975 22.8964 51.4006 23.5994C52.1036 24.3025 52.499 25.2557 52.5 26.25V33.75C52.499 34.7443 52.1036 35.6975 51.4006 36.4006C50.6975 37.1036 49.7443 37.499 48.75 37.5ZM11.25 26.25V33.75H48.75V26.25H11.25Z"
+                                                        fill="currentColor" />
+                                                        <path d="M16.875 50.625C17.9105 50.625 18.75 49.7855 18.75 48.75C18.75 47.7145 17.9105 46.875 16.875 46.875C15.8395 46.875 15 47.7145 15 48.75C15 49.7855 15.8395 50.625 16.875 50.625Z"
+                                                        fill="currentColor" />
+                                                        <path d="M48.75 56.25H11.25C10.2557 56.249 9.30249 55.8536 8.59945 55.1506C7.8964 54.4475 7.50099 53.4943 7.5 52.5V45C7.50099 44.0057 7.8964 43.0525 8.59945 42.3494C9.30249 41.6464 10.2557 41.251 11.25 41.25H48.75C49.7443 41.251 50.6975 41.6464 51.4006 42.3494C52.1036 43.0525 52.499 44.0057 52.5 45V52.5C52.499 53.4943 52.1036 54.4475 51.4006 55.1506C50.6975 55.8536 49.7443 56.249 48.75 56.25ZM11.25 45V52.5H48.75V45H11.25Z"
+                                                        fill="currentColor" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xxl mt-4 mt-xxl-0">
+                                            <div class="card p-3 px-4 corner-rounded add-shadow border-0 card-between">
+                                                	<h6 class="fw-light secondary-font">Available</h6>
+                                                	<h1 class="fw-bold primary-font pb-3">13</h1>
+                                                <div class="d-flex blue-1 justify-content-end mt-5">
+                                                    <svg width="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M48 3H8C5.23858 3 3 5.23858 3 8V18C3 20.7614 5.23858 23 8 23H48C50.7614 23 53 20.7614 53 18V8C53 5.23858 50.7614 3 48 3Z"
+                                                        stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+                                                        />
+                                                        <path d="M48 33H8C5.23858 33 3 35.2386 3 38V48C3 50.7614 5.23858 53 8 53H48C50.7614 53 53 50.7614 53 48V38C53 35.2386 50.7614 33 48 33Z"
+                                                        stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+                                                        />
+                                                        <path d="M13 13H13.025M13 43H13.025" stroke="currentColor" stroke-width="5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card p-3 px-4 mt-4 border-0 add-shadow corner-rounded">
+                                        	<h4 class="fw-bold primary-font mb-3">Server Status</h4>
+                                        <div class="row">
+                                            <div class="col-xl-6 col-xxl">
+                                                	<h6 class="fw-light secondary-font">Active</h6>
+                                                	<h1 class="fw-bold primary-font mb-4">571</h1>
+                                                <div class="d-flex justify-content-end green-2">
+                                                    <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.85714 3.64286C4.18651 3.64286 3.64286 4.18651 3.64286 4.85714V10.9286C3.64286 11.5992 4.18651 12.1429 4.85714 12.1429H29.1429C29.8135 12.1429 30.3571 11.5992 30.3571 10.9286V4.85714C30.3571 4.18651 29.8135 3.64286 29.1429 3.64286H4.85714ZM0 4.85714C0 2.17462 2.17462 0 4.85714 0H29.1429C31.8254 0 34 2.17462 34 4.85714V10.9286C34 13.6111 31.8254 15.7857 29.1429 15.7857H4.85714C2.17462 15.7857 0 13.6111 0 10.9286V4.85714Z"
+                                                        fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.07202 7.89272C6.07202 6.88677 6.8875 6.07129 7.89345 6.07129H7.90863C8.91458 6.07129 9.73006 6.88677 9.73006 7.89272C9.73006 8.89866 8.91458 9.71415 7.90863 9.71415H7.89345C6.8875 9.71415 6.07202 8.89866 6.07202 7.89272Z"
+                                                        fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.8767 19.9617C26.588 20.673 26.588 21.8263 25.8767 22.5376L16.7695 31.6447C16.0582 32.3561 14.905 32.3561 14.1936 31.6447C13.4823 30.9334 13.4823 29.7802 14.1936 29.0688L23.3008 19.9617C24.0121 19.2504 25.1654 19.2504 25.8767 19.9617Z"
+                                                        fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.63991 24.5154C8.9286 25.2267 8.9286 26.38 9.63991 27.0913L14.1935 31.6449C14.9048 32.3562 16.0581 32.3562 16.7694 31.6449C17.4807 30.9336 17.4807 29.7803 16.7694 29.069L12.2158 24.5154C11.5045 23.8041 10.3512 23.8041 9.63991 24.5154Z"
+                                                        fill="currentColor" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-xxl">
+                                                	<h6 class="fw-light secondary-font">In Active</h6>
+                                                	<h1 class="fw-bold primary-font mb-4">0</h1>
+                                                <div class="d-flex justify-content-end red-1">
+                                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.85714 3.64286C4.18651 3.64286 3.64286 4.18651 3.64286 4.85714V10.9286C3.64286 11.5992 4.18651 12.1429 4.85714 12.1429H29.1429C29.8135 12.1429 30.3571 11.5992 30.3571 10.9286V4.85714C30.3571 4.18651 29.8135 3.64286 29.1429 3.64286H4.85714ZM0 4.85714C0 2.17462 2.17462 0 4.85714 0H29.1429C31.8254 0 34 2.17462 34 4.85714V10.9286C34 13.6111 31.8254 15.7857 29.1429 15.7857H4.85714C2.17462 15.7857 0 13.6111 0 10.9286V4.85714Z"
+                                                        fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.07178 7.89272C6.07178 6.88677 6.88726 6.07129 7.89321 6.07129H7.90839C8.91433 6.07129 9.72981 6.88677 9.72981 7.89272C9.72981 8.89866 8.91433 9.71415 7.90839 9.71415H7.89321C6.88726 9.71415 6.07178 8.89866 6.07178 7.89272Z"
+                                                        fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.359 18.7478C25.0704 19.4592 25.0704 20.6124 24.359 21.3237L12.2162 33.4666C11.5049 34.1779 10.3516 34.1779 9.6403 33.4666C8.92898 32.7553 8.92898 31.602 9.6403 30.8907L21.7832 18.7478C22.4945 18.0365 23.6477 18.0365 24.359 18.7478Z"
+                                                        fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.6401 18.7478C8.92879 19.4592 8.92879 20.6124 9.6401 21.3237L21.783 33.4666C22.4943 34.1779 23.6475 34.1779 24.3588 33.4666C25.0702 32.7553 25.0702 31.602 24.3588 30.8907L12.216 18.7478C11.5047 18.0365 10.3514 18.0365 9.6401 18.7478Z"
+                                                        fill="currentColor" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-xxl">
+                                                	<h6 class="fw-light secondary-font">Maintenance</h6>
+                                                	<h1 class="fw-bold primary-font mb-4">39</h1>
+                                                <div class="d-flex justify-content-end yellow-1">
+                                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.5 2H29C29.7957 2 30.5587 2.31607 31.1213 2.87868C31.6839 3.44129 32 4.20435 32 5V11C32 11.7956 31.6839 12.5587 31.1213 13.1213C30.5587 13.6839 29.7957 14 29 14H21.5M32 24.5V23C32 22.2044 31.6839 21.4413 31.1213 20.8787C30.5587 20.3161 29.7957 20 29 20H27.5M32 32L31.25 31.25L29.75 32H5C4.20435 32 3.44129 31.6839 2.87868 31.1213C2.31607 30.5587 2 29.7957 2 29V23C2 22.2044 2.31607 21.4413 2.87868 20.8787C3.44129 20.3161 4.20435 20 5 20H20L32 32ZM32 32L2 2M8 26H8.015M14 14L2.75 2.75C2 2 2 2.75 2 6.5V11C2 11.7956 2.31607 12.5587 2.87868 13.1213C3.44129 13.6839 4.20435 14 5 14H14Z"
+                                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Right Column -->
+                                <div class="col-12 col-sm mt-4 mt-sm-0">
+                                    <div class="row">
+                                        <div class="col-md-12 col-xxl">
+                                            <div class="card p-3 border-0 add-shadow corner-rounded card-between">
+                                                	<h4 class="fw-bold primary-font mb-3">Account</h4>
+                                                <div class="row mb-2">
+                                                    <div class="col">
+                                                        	<h6 class="fw-light secondary-font text-nowrap">Active Acc</h6>
+                                                        	<h1 class="fw-bold primary-font mb-3 text-nowrap">23.3k</h1>
+                                                    </div>
+                                                    <div class="col green-2 d-flex justify-content-end align-items-end">
+                                                        <svg width="33" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0331 2.91212C11.5448 2.91212 8.71705 5.73991 8.71705 9.22816C8.71705 12.7164 11.5448 15.5442 15.0331 15.5442C18.5213 15.5442 21.3491 12.7164 21.3491 9.22816C21.3491 5.73991 18.5213 2.91212 15.0331 2.91212ZM5.80493 9.22816C5.80493 4.13159 9.93652 0 15.0331 0C20.1297 0 24.2612 4.13159 24.2612 9.22816C24.2612 14.3247 20.1297 18.4563 15.0331 18.4563C9.93652 18.4563 5.80493 14.3247 5.80493 9.22816Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.5731 19.0466C32.1598 19.5966 32.1895 20.5181 31.6395 21.1048L25.8104 27.3224C25.2707 27.8981 24.3706 27.9391 23.7808 27.4148L20.2834 24.306C19.6823 23.7718 19.6282 22.8514 20.1624 22.2504C20.6967 21.6493 21.617 21.5952 22.2181 22.1295L24.6557 24.2963L29.515 19.113C30.065 18.5264 30.9864 18.4966 31.5731 19.0466ZM6.71478 21.565C5.93284 21.5647 5.17773 21.85 4.59143 22.3674C4.00518 22.8848 3.62812 23.5984 3.53112 24.3743C3.53111 24.3743 3.53113 24.3742 3.53112 24.3743L2.9249 29.2303C2.89583 29.4629 2.91654 29.6991 2.9857 29.9231C3.05486 30.147 3.17085 30.3537 3.32598 30.5294C3.48112 30.7051 3.67184 30.8458 3.88551 30.9421C4.09917 31.0384 4.33088 31.0882 4.56526 31.0882H22.8051C23.6093 31.0882 24.2612 31.7401 24.2612 32.5443C24.2612 33.3484 23.6093 34.0003 22.8051 34.0003H4.56589C4.56579 34.0003 4.566 34.0003 4.56589 34.0003C3.91866 34.0004 3.27848 33.8629 2.68846 33.5968C2.09833 33.3307 1.57155 32.9422 1.14308 32.4569C0.7146 31.9717 0.394231 31.4008 0.203229 30.7823C0.0122448 30.1638 -0.0450289 29.5118 0.0352091 28.8695C0.0352165 28.8695 0.0352017 28.8696 0.0352091 28.8695L0.641433 24.0135C0.826433 22.5331 1.54592 21.1711 2.66457 20.1839C3.78307 19.1969 5.2236 18.6524 6.71534 18.6528H7.26094C8.0651 18.6528 8.717 19.3047 8.717 20.1089C8.717 20.9131 8.0651 21.565 7.26094 21.565H6.71478Z"
+                                                            fill="currentColor" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        	<h6 class="fw-light secondary-font text-nowrap">In Active Acc</h6>
+                                                        	<h1 class="fw-bold primary-font mb-3 text-nowrap">3</h1>
+                                                    </div>
+                                                    <div class="col red-1 d-flex justify-content-end align-items-end">
+                                                        <svg width="33" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0324 2.91206C11.5442 2.91206 8.71651 5.7398 8.71651 9.22798C8.71651 12.7162 11.5442 15.5439 15.0324 15.5439C18.5206 15.5439 21.3483 12.7162 21.3483 9.22798C21.3483 5.7398 18.5206 2.91206 15.0324 2.91206ZM5.80444 9.22798C5.80444 4.13151 9.93595 0 15.0324 0C20.1289 0 24.2604 4.13151 24.2604 9.22798C24.2604 14.3245 20.1289 18.456 15.0324 18.456C9.93595 18.456 5.80444 14.3245 5.80444 9.22798Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.71465 21.5649C5.93273 21.5646 5.17763 21.85 4.59134 22.3673C4.00511 22.8847 3.62805 23.5984 3.53105 24.3742C3.53105 24.3742 3.53106 24.3741 3.53105 24.3742L2.92484 29.2301C2.89578 29.4627 2.91649 29.6989 2.98564 29.9229C3.0548 30.1468 3.17079 30.3535 3.32592 30.5292C3.48105 30.7048 3.67177 30.8455 3.88543 30.9419C4.09909 31.0382 4.3308 31.088 4.56517 31.088H22.8047C23.6088 31.088 24.2607 31.7398 24.2607 32.544C24.2607 33.3481 23.6088 34 22.8047 34H4.56581C4.5657 34 4.56591 34 4.56581 34C3.91858 34.0001 3.27842 33.8626 2.6884 33.5965C2.09829 33.3304 1.57152 32.9419 1.14305 32.4566C0.714586 31.9714 0.394223 31.4006 0.203225 30.7821C0.0122447 30.1636 -0.0450281 29.5116 0.0352084 28.8693C0.0352158 28.8693 0.035201 28.8694 0.0352084 28.8693L0.641421 24.0134C0.826417 22.533 1.54589 21.171 2.66452 20.1839C3.783 19.1969 5.2235 18.6524 6.71521 18.6528H7.2608C8.06495 18.6528 8.71683 19.3047 8.71683 20.1089C8.71683 20.913 8.06495 21.5649 7.2608 21.5649L6.71465 21.5649Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.7741 19.0793C22.3427 18.5107 23.2646 18.5107 23.8333 19.0793L26.6897 21.9357L29.5461 19.0793C30.1147 18.5107 31.0366 18.5107 31.6052 19.0793C32.1738 19.6479 32.1738 20.5698 31.6052 21.1384L28.7488 23.9948L31.6052 26.8512C32.1738 27.4199 32.1738 28.3418 31.6052 28.9104C31.0366 29.479 30.1147 29.479 29.5461 28.9104L26.6897 26.054L23.8333 28.9104C23.2646 29.479 22.3427 29.479 21.7741 28.9104C21.2055 28.3418 21.2055 27.4199 21.7741 26.8512L24.6305 23.9948L21.7741 21.1384C21.2055 20.5698 21.2055 19.6479 21.7741 19.0793Z"
+                                                            fill="currentColor" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-xxl mt-4 mt-xxl-0">
+                                            <div class="card p-3 border-0 add-shadow corner-rounded card-between">
+                                                	<h4 class="fw-bold primary-font mb-3">Keyword</h4>
+                                                <div class="row mb-2">
+                                                    <div class="col">
+                                                        	<h6 class="fw-light secondary-font text-nowrap">Active Keyword</h6>
+                                                        	<h1 class="fw-bold primary-font mb-3 text-nowrap">21.1k</h1>
+                                                    </div>
+                                                    <div class="col green-2 d-flex justify-content-end align-items-end">
+                                                        <svg width="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14.9417 26.1472C16.4132 26.1472 17.8703 25.8573 19.2298 25.2942C20.5893 24.7311 21.8246 23.9057 22.8652 22.8652C23.9057 21.8246 24.7311 20.5893 25.2942 19.2298C25.8573 17.8703 26.1472 16.4132 26.1472 14.9417C26.1472 13.4701 25.8573 12.013 25.2942 10.6535C24.7311 9.29396 23.9057 8.05867 22.8652 7.01814C21.8246 5.97761 20.5893 5.15222 19.2298 4.58909C17.8703 4.02596 16.4132 3.73612 14.9417 3.73612C11.9698 3.73612 9.11959 4.9167 7.01814 7.01814C4.9167 9.11959 3.73612 11.9698 3.73612 14.9417C3.73612 17.9135 4.9167 20.7637 7.01814 22.8652C9.11959 24.9666 11.9698 26.1472 14.9417 26.1472ZM26.7448 24.104L33.4308 30.79C33.609 30.9624 33.7512 31.1686 33.8489 31.3965C33.9466 31.6244 33.9979 31.8695 33.9999 32.1175C34.0019 32.3655 33.9545 32.6114 33.8604 32.8408C33.7663 33.0703 33.6275 33.2787 33.452 33.4539C33.2766 33.6292 33.0679 33.7677 32.8384 33.8614C32.6088 33.9552 32.3628 34.0022 32.1148 33.9999C31.8669 33.9976 31.6218 33.9459 31.3941 33.8479C31.1663 33.7498 30.9603 33.6074 30.7881 33.4289L24.1022 26.7429C21.1 29.0734 17.3224 30.1722 13.5386 29.8155C9.75482 29.4588 6.24916 27.6736 3.73528 24.8232C1.2214 21.9728 -0.111704 18.2715 0.00733779 14.4727C0.12638 10.674 1.68862 7.06346 4.37604 4.37604C7.06346 1.68862 10.674 0.12638 14.4727 0.00733779C18.2715 -0.111704 21.9728 1.2214 24.8232 3.73528C27.6736 6.24916 29.4588 9.75482 29.8155 13.5386C30.1722 17.3224 29.0734 21.1 26.7429 24.1022L26.7448 24.104Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8636 9.88489C22.5929 10.6142 22.5929 11.7967 21.8636 12.5261L14.3933 19.9964C13.6639 20.7258 12.4814 20.7258 11.7521 19.9964C11.0227 19.2671 11.0227 18.0846 11.7521 17.3553L19.2224 9.88489C19.9518 9.15556 21.1343 9.15556 21.8636 9.88489Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.01708 13.6202C7.28774 14.3496 7.28774 15.5321 8.01708 16.2614L11.7523 19.9966C12.4816 20.7259 13.6641 20.7259 14.3934 19.9966C15.1228 19.2673 15.1228 18.0848 14.3934 17.3554L10.6582 13.6202C9.92891 12.8909 8.74642 12.8909 8.01708 13.6202Z"
+                                                            fill="currentColor" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        	<h6 class="fw-light secondary-font text-nowrap">In Active Keyword</h6>
+                                                        	<h1 class="fw-bold primary-font mb-3 text-nowrap">5</h1>
+                                                    </div>
+                                                    <div class="col red-1 d-flex justify-content-end align-items-end">
+                                                        <svg width="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14.9417 26.1472C16.4132 26.1472 17.8703 25.8573 19.2298 25.2942C20.5893 24.7311 21.8246 23.9057 22.8652 22.8652C23.9057 21.8246 24.7311 20.5893 25.2942 19.2298C25.8573 17.8703 26.1472 16.4132 26.1472 14.9417C26.1472 13.4701 25.8573 12.013 25.2942 10.6535C24.7311 9.29396 23.9057 8.05867 22.8652 7.01814C21.8246 5.97761 20.5893 5.15222 19.2298 4.58909C17.8703 4.02596 16.4132 3.73612 14.9417 3.73612C11.9698 3.73612 9.11959 4.9167 7.01814 7.01814C4.9167 9.11959 3.73612 11.9698 3.73612 14.9417C3.73612 17.9135 4.9167 20.7637 7.01814 22.8652C9.11959 24.9666 11.9698 26.1472 14.9417 26.1472ZM26.7448 24.104L33.4308 30.79C33.609 30.9624 33.7512 31.1686 33.8489 31.3965C33.9466 31.6244 33.9979 31.8695 33.9999 32.1175C34.0019 32.3655 33.9545 32.6114 33.8604 32.8408C33.7663 33.0703 33.6275 33.2787 33.452 33.4539C33.2766 33.6292 33.0679 33.7677 32.8384 33.8614C32.6088 33.9552 32.3628 34.0022 32.1148 33.9999C31.8669 33.9976 31.6218 33.9459 31.3941 33.8479C31.1663 33.7498 30.9603 33.6074 30.7881 33.4289L24.1022 26.7429C21.1 29.0734 17.3224 30.1722 13.5386 29.8155C9.75482 29.4588 6.24916 27.6736 3.73528 24.8232C1.2214 21.9728 -0.111704 18.2715 0.00733779 14.4727C0.12638 10.674 1.68862 7.06346 4.37604 4.37604C7.06346 1.68862 10.674 0.12638 14.4727 0.00733779C18.2715 -0.111704 21.9728 1.2214 24.8232 3.73528C27.6736 6.24916 29.4588 9.75482 29.8155 13.5386C30.1722 17.3224 29.0734 21.1 26.7429 24.1022L26.7448 24.104Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9964 9.88489C20.7258 10.6142 20.7258 11.7967 19.9964 12.5261L12.5261 19.9964C11.7967 20.7258 10.6142 20.7258 9.88489 19.9964C9.15556 19.2671 9.15556 18.0846 9.88489 17.3553L17.3553 9.88489C18.0846 9.15556 19.2671 9.15556 19.9964 9.88489Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.88493 9.88489C9.15559 10.6142 9.15559 11.7967 9.88493 12.5261L17.3553 19.9964C18.0846 20.7258 19.2671 20.7258 19.9965 19.9964C20.7258 19.2671 20.7258 18.0846 19.9965 17.3553L12.5261 9.88489C11.7968 9.15556 10.6143 9.15556 9.88493 9.88489Z"
+                                                            fill="currentColor" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card p-3 border-0 add-shadow corner-rounded mt-4">
+                                        	<h4 class="fw-bold primary-font mb-3">Media & Pictures</h4>
+                                        <div class="row">
+                                            <div class="col-12 col-lg">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        	<h6 class="fw-light secondary-font text-nowrap">Media</h6>
+                                                        	<h1 class="fw-bold primary-font mb-3 text-nowrap">7.4k</h1>
+                                                    </div>
+                                                    <div class="col blue-1 d-flex justify-content-end align-items-end">
+                                                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.84985 2.75676C3.69387 2.75676 2.75676 3.69387 2.75676 4.84985V29.1501C2.75676 30.3061 3.69387 31.2432 4.84985 31.2432H29.1501C30.3061 31.2432 31.2432 30.3061 31.2432 29.1501V4.84985C31.2432 3.69387 30.3061 2.75676 29.1501 2.75676H4.84985ZM0 4.84985C0 2.17135 2.17135 0 4.84985 0H29.1501C31.8286 0 34 2.17135 34 4.84985V29.1501C34 31.8286 31.8286 34 29.1501 34H4.84985C2.17135 34 0 31.8286 0 29.1501V4.84985Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9251 9.69963C10.2484 9.69963 9.69987 10.2482 9.69987 10.9249C9.69987 11.6015 10.2484 12.1501 10.9251 12.1501C11.6018 12.1501 12.1503 11.6015 12.1503 10.9249C12.1503 10.2482 11.6018 9.69963 10.9251 9.69963ZM6.94312 10.9249C6.94312 8.72566 8.72591 6.94287 10.9251 6.94287C13.1243 6.94287 14.9071 8.72566 14.9071 10.9249C14.9071 13.124 13.1243 14.9068 10.9251 14.9068C8.72591 14.9068 6.94312 13.124 6.94312 10.9249Z"
+                                                            fill="currentColor" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9427 12.1499C24.3082 12.1499 24.6588 12.2951 24.9173 12.5536L33.596 21.2323C34.1343 21.7706 34.1343 22.6433 33.596 23.1816C33.0577 23.7199 32.185 23.7199 31.6467 23.1816L23.9427 15.4776L5.82423 33.596C5.28594 34.1343 4.4132 34.1343 3.87491 33.596C3.33662 33.0577 3.33662 32.185 3.87491 31.6467L22.968 12.5536C23.2265 12.2951 23.5771 12.1499 23.9427 12.1499Z"
+                                                            fill="currentColor" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        	<h6 class="fw-light secondary-font text-nowrap">Pictures</h6>
+                                                        	<h1 class="fw-bold primary-font mb-3 text-nowrap">8.3k</h1>
+                                                    </div>
+                                                    <div class="col blue-1 d-flex justify-content-end align-items-end">
+                                                        <svg width="32" height="34" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M28.9172 0H2.2244C1.63445 0 1.06867 0.234356 0.651512 0.651513C0.234356 1.06867 0 1.63445 0 2.2244V28.9172C0 29.5072 0.234356 30.073 0.651512 30.4901C1.06867 30.9073 1.63445 31.1416 2.2244 31.1416H4.31534V32.8878C4.31534 33.1828 4.43252 33.4657 4.6411 33.6742C4.84968 33.8828 5.13257 34 5.42754 34C5.72252 34 6.00541 33.8828 6.21399 33.6742C6.42257 33.4657 6.53974 33.1828 6.53974 32.8878V31.1416H24.335V32.8878C24.335 33.1828 24.4521 33.4657 24.6607 33.6742C24.8693 33.8828 25.1522 34 25.4472 34C25.7421 34 26.025 33.8828 26.2336 33.6742C26.4422 33.4657 26.5594 33.1828 26.5594 32.8878V31.1416H28.9172C29.5072 31.1416 30.073 30.9073 30.4901 30.4901C30.9073 30.073 31.1416 29.5072 31.1416 28.9172V2.2244C31.1416 1.63445 30.9073 1.06867 30.4901 0.651513C30.073 0.234356 29.5072 0 28.9172 0ZM2.2244 28.9172V2.2244H28.9172V28.9172H2.2244Z"
+                                                            fill="currentColor" />
+                                                            <path d="M17.7947 15.571H20.0191V17.7954H17.7947V15.571ZM22.2435 15.571H24.4679V17.7954H22.2435V15.571ZM17.7947 20.0198H20.0191V22.2442H17.7947V20.0198ZM22.2435 20.0198H24.4679V22.2442H22.2435V20.0198ZM25.8248 6.67334H17.7947V11.1221C17.7807 11.2466 17.7931 11.3726 17.8312 11.4919C17.8692 11.6112 17.9321 11.7211 18.0155 11.8145C18.099 11.9078 18.2012 11.9825 18.3155 12.0337C18.4298 12.0848 18.5536 12.1112 18.6789 12.1112C18.8041 12.1112 18.9279 12.0848 19.0422 12.0337C19.1565 11.9825 19.2587 11.9078 19.3422 11.8145C19.4257 11.7211 19.4885 11.6112 19.5265 11.4919C19.5646 11.3726 19.577 11.2466 19.5631 11.1221V8.45286H25.8248C26.0607 8.45286 26.287 8.35912 26.4539 8.19226C26.6208 8.02539 26.7145 7.79908 26.7145 7.5631C26.7145 7.32712 26.6208 7.10081 26.4539 6.93395C26.287 6.76708 26.0607 6.67334 25.8248 6.67334ZM5.34912 6.67334H14.4024V8.89774H5.34912V6.67334ZM5.34912 11.1221H14.4024V13.3465H5.34912V11.1221ZM5.34912 15.571H14.4024V17.7954H5.34912V15.571ZM5.34912 20.0198H14.4024V22.2442H5.34912V20.0198ZM5.34912 24.4686H14.4024V26.693H5.34912V24.4686Z"
+                                                            fill="currentColor" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card p-3 border-0 add-shadow corner-rounded mt-4">
+                                        <div class="d-flex justify-content-between primary-font">
+                                             <h4 class="fw-bold primary-font mb-3">Activity</h4>
+                                            <svg width="22" viewBox="0 0 22 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z"
+                                                fill="currentColor" />
+                                                <path d="M11 4C12.1046 4 13 3.10457 13 2C13 0.89543 12.1046 0 11 0C9.89543 0 9 0.89543 9 2C9 3.10457 9.89543 4 11 4Z"
+                                                fill="currentColor" />
+                                                <path d="M20 4C21.1046 4 22 3.10457 22 2C22 0.89543 21.1046 0 20 0C18.8954 0 18 0.89543 18 2C18 3.10457 18.8954 4 20 4Z"
+                                                fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/all.js"></script>
+    </body>
+
+</html>

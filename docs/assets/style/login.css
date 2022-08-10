@@ -1,0 +1,55 @@
+body { height: 100%;}
+
+#logo { width: 132px;}
+
+.login h2 { font-size: 32px; }
+
+.login h6 { font-size: 14px;}
+
+.footer { font-size: 12px; }
+
+form label { font-size: 14px; }
+form input { 
+  background: #FAFBFF !important; 
+  border: none !important;
+  padding: 12px 20px !important;
+}
+
+form input[type='username'], form input[type='password'] { font-size: 12px; }
+
+form input::placeholder {
+  color: #4d5e6780 !important;
+  font-size: 12px;
+}
+
+input:focus { 
+  border: 1px solid #1AA86E !important;
+  box-shadow: none !important;
+}
+
+.login-btn{
+  height: 46px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+button:hover {
+  transition: 0,7s;
+  transform: translateY(-1px);
+}
+
+.background-texture-1 {
+  background-image: url(../img/illustration/background-1.svg);
+  background-position: 0%;
+  background-repeat: no-repeat;
+}
+
+.background-texture-2 {
+  background-image: url(../img/illustration/background-2.svg) !important;
+  background-position: 0% !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.title { font-size: 64px; }
+.sub-title { font-size: 16px; }

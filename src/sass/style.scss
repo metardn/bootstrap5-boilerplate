@@ -1,16 +1,71 @@
 $theme-colors: (
-    "primary": blue,
-    "dark": #000000
+	"primary": blue,
+	"dark": #000000
 );
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-body {
-    padding-top:56px;
+* { font-family: 'Inter'; }
+
+.background { background: #F8F8F8; }
+
+// sidebar
+.sidebar {
+	background: #1AA86E;
+	border-radius: 10px;
+	width: 78px;
+	top: 20px;
+	bottom: 20px;
 }
-.footer {
-    margin-top:3rem;
+
+.bottom-sidebar {
+  bottom: 15px;
+  transform: translateX(70%);
 }
-.navbar {
-    border-bottom:1px solid #eee;
+
+// sub sidebar
+.sub-sidebar {
+  width: 220px;
+  top: 20px;
+  bottom: 20px;
+  left: 115px;
+  border-radius: 0px 10px 10px 0px;
 }
+
+.sub-sidebar h4 { font-size: 22px; }
+.sub-sidebar label { font-size: 13px; }
+.sub-sidebar-menu, .sub-list-menu { color: #8F979B; }
+
+
+// content
+.add-shadow { box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.03), 0px 1.46007px 11.3155px rgba(0, 0, 0, 0.0174465), 0px 0.708835px 5.49347px rgba(0, 0, 0, 0.0130688), 0px 0.347484px 2.693px rgba(0, 0, 0, 0.0101195), 0px 0.137396px 1.06482px rgba(0, 0, 0, 0.00696833); }
+.corner-rounded { border-radius: 10px !important; }
+
+// color
+.bg-primary-green { background: #1AA86E; }
+
+.primary-green { color: #1AA86E;}
+.primary-font { color: #4D5E67; }
+.secondary-font { color: #8F979B; }
+
+.green-1 { color: #6FE2B3; }
+.green-2 { color: #A2E26F; }
+
+.red-1 { color: #E26F6F; }
+.yellow-1 { color: #FDDC66; }
+.blue-1 { color: #6FD4E2; }
+
+
+// card
+.card-between { height: 100%;}
+
+.card h4 { font-size: 22px;}
+.card h6 { font-size: 14px;}
+.card h1 { font-size: 40px;}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+}
+

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="./assets/style/server-news.css">
+	<link rel="stylesheet" href="./css/style.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+	<title>AMS</title>
+  </head>
+<body>
+	<div class="container-fluid background">
+	  <div class="mx-3">
+		<div class="row">
+		  <div class="col-sm-2 col-md-5 col-lg-4 col-xl-3">
+			
+			<!-- sidebar -->
+			<div class="d-none d-sm-block position-fixed sidebar add-shadow">
+			  <div class="m-3">
+				<div class="d-flex justify-content-center my-4">
+				  <img src="./assets/img/logo.svg" alt="">
+				</div>
+				<div class="d-flex flex-column">
+				  <ul class="list-unstyled p-0">
+					<li class="d-flex justify-content-center py-3">
+					  <img src="./assets/img/icons/home.svg" alt="">
+					</li>
+					<li class="d-flex justify-content-center py-3">
+					  <img src="./assets/img/icons/server.svg" alt="">
+					</li>
+					<li class="d-flex justify-content-center py-3">
+					  <img src="./assets/img/icons/code.svg" alt="">
+					</li>
+					<li class="d-flex justify-content-center py-3">
+					  <img src="./assets/img/icons/book-open.svg" alt="">
+					</li>
+					<li class="d-flex justify-content-center py-3">
+					  <img src="./assets/img/icons/key.svg" alt="">
+					</li>
+					<li class="d-flex justify-content-center py-3">
+					  <img src="./assets/img/icons/edit.svg" alt="">
+					</li>
+					<li class="d-flex justify-content-center py-3" >
+					  <img src="./assets/img/icons/image.svg" alt="">
+					</li>
+				  </ul>
+				  <div class="position-fixed bottom-sidebar">
+					<ul class="list-unstyled p-0">
+					  <li class="d-flex justify-content-center py-3" >
+						<img src="./assets/img/icons/info.svg" alt="">
+					  </li>
+					  <li class="d-flex justify-content-center py-3" >
+						<img src="./assets/img/icons/log-out.svg" alt="">
+					  </li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			</div>
+
+			<div class="sub-sidebar position-fixed bg-white d-none d-md-block">
+			  <div class="m-4">
+				<h4 class="py-2 primary-font">Infrastructure</h4>
+				<!-- accordion -->
+				<div data-bs-toggle="collapse" href="#serverAccordion" class="d-flex gap-3 align-items-center py-2  my-1 sub-sidebar-menu-active primary-font">
+				  <img src="./assets/img/icons/hard-drive.svg" alt="">
+				  <label>Server</label>
+				  <svg class="ms-5" width="11" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10 1L5.5 5L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+				  </svg>
+				</div>
+				<!-- accordion body-->
+				<div id="serverAccordion" class="collapse show" data-bs-parent="#accordion">
+				  <div class="d-flex ms-4 gap-3 align-items-center sub-list-menu-active py-2">
+					<svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+					  <circle cx="4" cy="4.5" r="3.5" stroke="currentColor"/>
+					</svg>
+					<label>Server News</label>
+				  </div>
+				  <div class="d-flex ms-4 gap-3 align-items-center sub-list-menu py-2">
+					<svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+					  <circle cx="4" cy="4.5" r="3.5" stroke="currentColor"/>
+					</svg>
+					<label>All Servers</label>
+				  </div>
+
+				</div>
+				
+				<div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 my-1">
+				  <img src="./assets/img/icons/tool.svg" alt="">
+				  <label>Maintenance</label>
+				</div>
+				<div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 my-1">
+				  <img src="./assets/img/icons/settings.svg" alt="">
+				  <label>Service</label>
+				</div>
+				<div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 my-1">
+				  <img src="./assets/img/icons/network.svg" alt="">
+				  <label>Cluster</label>
+				</div>
+				<div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 my-1">
+				  <img src="./assets/img/icons/rack.svg" alt=""> 
+				  <label>Rack</label>
+				</div>
+				<div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 my-1">
+				  <img src="./assets/img/icons/room.svg" alt=""> 
+				  <label>Room</label>
+				</div>
+				<div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 my-1">
+				  <img src="./assets/img/icons/ups.svg" alt=""> 
+				  <label>UPS</label>
+				</div>
+				<div class="d-flex gap-3 align-items-center sub-sidebar-menu py-2 my-1">
+				  <img src="./assets/img/icons/map-pin.svg" alt="">
+				  <label>Location</label>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <!-- Content -->
+		  <div class="col my-4">
+			<div class="content">
+			  <!-- Header -->
+			  <div class="container-fluid bg-white d-flex justify-content-between align-items-center py-2 corner-rounded add-shadow">
+				<div class="d-flex gap-3 align-items-center">
+				  <svg class="primary-green" width="18"  viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16.5 9H1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M4.0875 3.8325L1.5 9V13.5C1.5 13.8978 1.65804 14.2794 1.93934 14.5607C2.22064 14.842 2.60218 15 3 15H15C15.3978 15 15.7794 14.842 16.0607 14.5607C16.342 14.2794 16.5 13.8978 16.5 13.5V9L13.9125 3.8325C13.7883 3.58259 13.5969 3.37228 13.3597 3.22521C13.1226 3.07814 12.8491 3.00015 12.57 3H5.43C5.15094 3.00015 4.87745 3.07814 4.64028 3.22521C4.40312 3.37228 4.21168 3.58259 4.0875 3.8325V3.8325Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M4.5 12H4.5075" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M7.5 12H7.5075" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				  <h5 class="primary-font header-title m-0 fw-bold">Server <span class="fw-light">/ Server News</span></h5>
+				</div>
+				<div class="row p-0">
+				  <div class="col user p-0 d-none d-sm-block">
+					<label class="fw-bold">Geneva</label>
+					<small>admin</small>
+				  </div>
+				  <div class="col p-0 d-flex align-items-center">
+					<img class="user-ava rounded-circle" src="./assets/img/avatar/ava.jpg" alt="">
+				  </div>
+				</div>
+			  </div>
+
+			  <div class="row mt-4">
+				
+				<!-- Left Column -->
+				<div class="col-12 col-lg">
+				  <div class="card main-card border-0 p-3 px-4 corner-rounded">
+					<div class="mb-auto d-flex gap-2">
+					  <div class="bg-white icon-btn d-flex justify-content-center align-items-center">
+						<img src="./assets/img/icons/plus.svg" alt="">
+					  </div>
+					  <div class="bg-white icon-btn d-flex justify-content-center align-items-center">
+						<img src="./assets/img/icons/filter.svg" alt="">
+					  </div>
+					</div>
+					<h6 class="mb-1 mt-3 fw-light">Server Found</h6>
+					<h1 class="m-0 fw-bold">623</h1>
+				  </div>
+
+				  <div class="card update-card p-3 px-4 mt-4 border-0 add-shadow corner-rounded">
+					<h4 class="fw-bold primary-font mb-3">Last Update</h4>
+					<div class="list-scroll pe-2">
+					  <div class="row py-2  my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col d-flex justify-content-end align-items-center">
+						  <small class="fw-light primary-font">1 jam lalu</small>
+						</div>
+					  </div>
+					  <div class="row py-2  my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col d-flex justify-content-end align-items-center">
+						  <small class="fw-light primary-font">4 hari lalu</small>
+						</div>
+					  </div>
+					  <div class="row py-2  my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col d-flex justify-content-end align-items-center">
+						  <small class="fw-light  primary-font">20 Januari 2022</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col d-flex justify-content-end align-items-center">
+						  <small class="fw-light primary-font">31 November 2021</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col d-flex justify-content-end align-items-center">
+						  <small class="fw-light primary-font">31 November 2021</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col d-flex justify-content-end align-items-center">
+						  <small class="fw-light primary-font">31 November 2021</small>
+						</div>
+					  </div>
+
+					</div>
+					
+				  </div>
+				</div>
+
+				<!-- Right Column -->
+				<div class="col mt-4 mt-lg-0">
+				  <div class="card server-status-card p-3 px-4 border-0 add-shadow corner-rounded">
+					<div class="d-flex align-items-center justify-content-between mb-3">
+					  <h4 class="fw-bold primary-font mb-0">Server Status List</h4>
+					  <div class="server-status-icon icon-btn d-flex justify-content-center align-items-center">
+						<img src="./assets/img/icons/filter.svg" alt="">
+					  </div>
+					</div>
+					<div class="list-scroll pe-2">
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-green-2 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Active</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-yellow-1 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Maintenance</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-green-2 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Active</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-red-1 status rounded-circle"></div>
+						  <small class="fw-light primary-font">In Active</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-yellow-1 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Maintenance</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-green-2 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Active</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-green-2 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Active</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-green-2 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Active</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-green-2 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Active</small>
+						</div>
+					  </div>
+					  <div class="row py-2 my-2">
+						<div class="col">
+						  <h6 class="primary-font fw-bold mb-0">4GQ2962</h6>
+						  <small class="fw-light secondary-font">DELL - POWEREDGE R620</small>
+						</div>
+						<div class="col-5 col-lg-6 col-xl-4 d-flex align-items-center gap-3">
+						  <div class="bg-green-2 status rounded-circle"></div>
+						  <small class="fw-light primary-font">Active</small>
+						</div>
+					  </div>
+					  
+					</div>
+					<div class="d-flex justify-content-end pt-4 mt-auto">
+					  <h6 class="primary-green fw-bolder">See All Servers</h6>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+
+
+<script src="./js/all.js"></script>
+</body>
+</html>
